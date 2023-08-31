@@ -5,7 +5,8 @@
 # types
 
 # str
-y = "I love Computer Science!"
+
+y = "I love Computer Science!" # variable and : declares type/datatype on other end, ex: (n: int) (y: bool)
 print(y)
 # numbers
 mynum = 47
@@ -21,7 +22,7 @@ print(flag)
 lane_tech = ["chicago", "high school", 1908, 60618, "addison/western"]
 print(lane_tech.reverse())
 print(lane_tech)
-z = lane_tech.pop()
+z = lane_tech.pop() # takes out last thing in list
 print(z)
 
 
