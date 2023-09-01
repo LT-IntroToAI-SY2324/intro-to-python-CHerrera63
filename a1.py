@@ -35,26 +35,36 @@ print(absolute(-3))
 
 
 def factorial(n: int) -> int:
-    for x in range(n,0,-1):
+    for x in range(n-1,0,-1):
         n = n*x
     return n
 print(factorial(4))
-#     """Takes a number n, and computes the factorial n! You can assume the passed in
-#     number will be positive
+"""Takes a number n, and computes the factorial n! You can assume the passed in
+    number will be positive
 
-#     Args:
-#         n - the number to compute factorial of
+    Args:
+        n - the number to compute factorial of
 
-#     Returns:
-#         factorial of the passed in number
-#     """
+    Returns:
+        factorial of the passed in number
+    """
 # #     raise NotImplementedError("factorial")
 
 
-# T = TypeVar("T")
+T = TypeVar("T")
+my_list = ["a", "b", "c", "d"]
 
+def every_other(lst: List[T]) -> List[T]:
+    if int(len(my_list))/2 == float:
+        for x in range(0,len(my_list),2):
+            print(my_list[x])
+    else:
+        try:       
+            for x in range(0,len(my_list),2):
+                print(my_list[x])
+        execpt:
+            None
 
-# def every_other(lst: List[T]) -> List[T]:
 #     """Takes a list and returns a list of every other element in the list, starting with
 #     the first.
 
