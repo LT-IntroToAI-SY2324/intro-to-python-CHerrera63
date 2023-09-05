@@ -53,45 +53,47 @@ print(factorial(4))
 
 T = TypeVar("T")
 my_list = ["a", "b", "c", "d"]
-
 def every_other(lst: List[T]) -> List[T]:
-    if int(len(my_list))/2 == float:
+    y = int(len(my_list))/2
+    if y != int:
         for x in range(0,len(my_list),2):
             print(my_list[x])
     else:
-        try:       
-            for x in range(0,len(my_list),2):
-                print(my_list[x])
-        execpt:
-            None
+        for x in range(0,len(my_list)-1,2):
+            print(my_list[x])
+every_other(my_list)
+"""Takes a list and returns a list of every other element in the list, starting with
+    the first.
 
-#     """Takes a list and returns a list of every other element in the list, starting with
-#     the first.
+    Args:
+        lst - a list of any (constrained by type T to be the same type as the returned
+            list)
 
-#     Args:
-#         lst - a list of any (constrained by type T to be the same type as the returned
-#             list)
-
-#     Returns:
-#         a list of every of other item in the original list starting with the first
-#     """
+    Returns:
+        a list of every of other item in the original list starting with the first
+    """
 #     raise NotImplementedError("every_other")
 
+int_list = [1,2,3,4]
+def sum_list(lst: List[int]) -> int:
+    sum = 0
+    for x in range(0,len(int_list)):
+        sum = sum + int(int_list[x])
+    print(sum)
+sum_list(int_list)
+"""Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
+    use the built in function `sum`.
 
-# def sum_list(lst: List[int]) -> int:
-#     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
-#     use the built in function `sum`.
+    Args:
+        lst - a list of numbers
 
-#     Args:
-#         lst - a list of numbers
-
-#     Returns:
-#         the sum of the passed in list
-#     """
+    Returns:
+        the sum of the passed in list
+    """
 #     raise NotImplementedError("sum_list")
 
-
-# def mean(lst: List[int]) -> float:
+math_list = [1,2,3,4,5]
+def mean(lst: List[int]) -> float:
 #     """Takes a list of numbers, and returns the mean of the numbers.
 
 #     Args:
