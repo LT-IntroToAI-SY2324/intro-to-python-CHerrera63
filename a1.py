@@ -94,18 +94,34 @@ sum_list(int_list)
 
 math_list = [1,2,3,4,5]
 def mean(lst: List[int]) -> float:
-#     """Takes a list of numbers, and returns the mean of the numbers.
+    sum = 0
+    count = 0
+    for x in range(0,len(math_list)):
+        sum = sum + int(math_list[x])
+        count = count + 1
+    mean = sum/count
+    print(mean)
+mean(math_list)
+"""Takes a list of numbers, and returns the mean of the numbers.
 
-#     Args:
-#         lst - a list of numbers
+    Args:
+        lst - a list of numbers
 
-#     Returns:
-#         the mean of the passed in list
-#     """
+    Returns:
+        the mean of the passed in list
+    """
 #     raise NotImplementedError("mean")
 
-
-# def median(lst: List[int]) -> float:
+median_list = [2,4,6,8,10]
+def median(lst: List[int]) -> float:
+    sum = 0
+    count = 0
+    for x in range(0,len(median_list)-1):
+        sum = sum + int(median_list[x])
+        count = count + 1
+    y = count//2
+    if y !
+median(median_list)
 #     """Takes an ordered list of numbers, and returns the median of the numbers.
 
 #     If the list has an even number of values, it computes the mean of the two center
