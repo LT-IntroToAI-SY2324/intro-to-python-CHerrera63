@@ -112,31 +112,36 @@ mean(math_list)
     """
 #     raise NotImplementedError("mean")
 
-median_list = [2,4,6,8,10]
+median_list = [0,2,4,6,8]
 def median(lst: List[int]) -> float:
     sum = 0
     count = 0
     for x in range(0,len(median_list)-1):
         sum = sum + int(median_list[x])
         count = count + 1
-    y = count//2
-    if y !
+    if count%2 != 0:
+        y = count//2
+        print(median_list[y],",",median_list[y+1])
+    else:
+        y = count//2
+        print(median_list[y])
 median(median_list)
-#     """Takes an ordered list of numbers, and returns the median of the numbers.
+"""Takes an ordered list of numbers, and returns the median of the numbers.
 
-#     If the list has an even number of values, it computes the mean of the two center
-#     values.
+    If the list has an even number of values, it computes the mean of the two center
+    values.
 
-#     Args:
-#         lst - an ordered list of numbers
+    Args:
+        lst - an ordered list of numbers
 
-#     Returns:
-#         the median of the passed in list
-#     """
+    Returns:
+        the median of the passed in list
+    """
 #     raise NotImplementedError("median")
 
-
-# def duck_duck_goose(lst: List[str]) -> List[str]:
+duck_list = ['Nathan', 'Sasha', 'Sara', 'Jennie']
+def duck_duck_goose(lst: List[str]) -> List[str]:
+    quit()
 #     """Given an list of names (strings), play 'duck duck goose' with it, knocking out
 #     every third name (wrapping around) until only two names are left.
 
