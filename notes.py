@@ -5,8 +5,9 @@
 # types
 
 # str
-y = "I love Computer Science!"
 
+y = "I love Computer Science!" # variable and : declares type/datatype on other end, ex: (n: int) (y: bool)
+print(y)
 # numbers
 mynum = 47
 anothernum = 47.7
@@ -21,7 +22,7 @@ print(flag)
 lane_tech = ["chicago", "high school", 1908, 60618, "addison/western"]
 print(lane_tech.reverse())
 print(lane_tech)
-z = lane_tech.pop()
+z = lane_tech.pop() # takes out first and/or last thing in list
 print(z)
 
 
@@ -31,10 +32,10 @@ print(lane_tech[-1])
 print(lane_tech[len(lane_tech)-1])
 
 # Slices
-print(lane_tech[1:3])
-print(lane_tech[:3])
-print(lane_tech[1:])
-print(lane_tech[:])
+print(lane_tech[1:3]) # left number is beginning and right number is where it ends, but doesn't include that number
+print(lane_tech[:3]) # left blank = 0
+print(lane_tech[1:]) # right blank = the rest of the list
+print(lane_tech[:]) # all blank = entire list
 
 # Functions
 

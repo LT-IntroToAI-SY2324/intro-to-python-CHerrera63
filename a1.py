@@ -16,7 +16,13 @@ from typing import List, TypeVar
 
 
 def absolute(n: int) -> int:
-    """Gives the absolute value of the passed in number. Cannot use the built in
+    if n >= 0:
+        n = n+n-n
+    else:
+        n = n-n-n
+    return n
+print(absolute(-3))
+"""Gives the absolute value of the passed in number. Cannot use the built in
     function `abs`.
 
     Args:
@@ -25,11 +31,15 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    # raise NotImplementedError("absolute")
 
 
 def factorial(n: int) -> int:
-    """Takes a number n, and computes the factorial n! You can assume the passed in
+    for x in range(n-1,0,-1):
+        n = n*x
+    return n
+print(factorial(4))
+"""Takes a number n, and computes the factorial n! You can assume the passed in
     number will be positive
 
     Args:
@@ -38,14 +48,25 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+# #     raise NotImplementedError("factorial")
 
 
 T = TypeVar("T")
-
-
 def every_other(lst: List[T]) -> List[T]:
-    """Takes a list and returns a list of every other element in the list, starting with
+    y = int(len(lst))/2
+    new_list = []
+    if y != int:
+        for x in range(0,len(lst),2):
+            new_list.append(lst[x])
+            print(lst[x])
+        return new_list
+    else:
+        for x in range(0,len(lst)-1,2):
+            new_list.append(lst[x])
+            print(lst[x])
+        return new_list
+print(every_other(["a", "b", "c", "d", "e"]))
+"""Takes a list and returns a list of every other element in the list, starting with
     the first.
 
     Args:
@@ -55,11 +76,17 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
-
+#     raise NotImplementedError("every_other")
 
 def sum_list(lst: List[int]) -> int:
-    """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
+    int_list = lst
+    sum = 0
+    for x in range(0,len(int_list)):
+        sum = sum + int(int_list[x])
+    print(sum)
+    return sum
+sum_list([1,2,3,4,5])
+"""Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
     use the built in function `sum`.
 
     Args:
@@ -68,11 +95,20 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
-
+#     raise NotImplementedError("sum_list")
 
 def mean(lst: List[int]) -> float:
-    """Takes a list of numbers, and returns the mean of the numbers.
+    math_list = lst
+    sum = 0
+    count = 0
+    for x in range(0,len(math_list)):
+        sum = sum + int(math_list[x])
+        count = count + 1
+    mean = sum/count
+    print(mean)
+    return mean
+mean([1,2,3,4,5])
+"""Takes a list of numbers, and returns the mean of the numbers.
 
     Args:
         lst - a list of numbers
@@ -80,11 +116,25 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
-
+#     raise NotImplementedError("mean")
 
 def median(lst: List[int]) -> float:
-    """Takes an ordered list of numbers, and returns the median of the numbers.
+    median_list = lst
+    sum = 0
+    count = 0
+    for x in range(0,len(median_list)-1):
+        sum = sum + int(median_list[x])
+        count = count + 1
+    if count%2 != 0:
+        y = count//2
+        print(median_list[y],",",median_list[y+1])
+        return median_list[y],",",median_list[y+1]
+    else:
+        y = count//2
+        print(median_list[y])
+        return median_list[y]
+median([0,2,4,6,8])
+"""Takes an ordered list of numbers, and returns the median of the numbers.
 
     If the list has an even number of values, it computes the mean of the two center
     values.
@@ -95,11 +145,20 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+#     raise NotImplementedError("median")
 
-
+duck_list = ['Nathan', 'Sasha', 'Sara', 'Jennie']
 def duck_duck_goose(lst: List[str]) -> List[str]:
-    """Given an list of names (strings), play 'duck duck goose' with it, knocking out
+    x = 2
+    while len(lst) != 2:
+        if x >= len(lst):
+            x = x-len(lst)
+        lst.pop(x)
+        x = x+2
+    print(lst)
+    return lst
+duck_duck_goose(duck_list)
+"""Given an list of names (strings), play 'duck duck goose' with it, knocking out
     every third name (wrapping around) until only two names are left.
 
     In other words, when you hit the end of the list, wrap around and keep counting from
@@ -117,10 +176,10 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+#     raise NotImplementedError("duck_duck_goose")
 
 
-# this line causes the nested code to be skipped if the file is imported instead of run
+# # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
     assert factorial(4) == 24, "factorial of 4 failed"
